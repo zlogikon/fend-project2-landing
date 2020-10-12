@@ -13,38 +13,16 @@
  *
 */
 
-/**
- * Define Global Variables
- *
-*/
-//Create list of sections
-
+//Generate list of sections based on index.html
 const sections = document.querySelectorAll("section");
+
+//other global variables
 const navbarList = document.querySelector("#navbar__list");
 const topButton = document.querySelector("#topButton");
 const navMenu = document.querySelector("#navMenu");
 let navLink = "";
 let newTarget = "";
 let navItems = "";
-let newRect = "";
-
-
-
-
-/**
- * End Global Variables
- * Start Helper Functions
- *
-*/
-/**
- * End Helper Functions
- * Begin Main Functions
- *
-
-
-*/
-
-
 
 // build the navBar
 buildNav = () => {
@@ -56,8 +34,9 @@ buildNav = () => {
   return buildNav;
 };
 
+buildNav();
 
-
+navbarList.insertAdjacentHTML('beforeend', navItems);
 
 // Add class 'active' to section when near top of viewport
 
@@ -67,21 +46,18 @@ isInViewport = () => {
     sectionView = document.querySelector(`#${section.id}`);
     navLink = document.querySelector(`#navLink__${section.id}`);
     if (rect.top <= 200 && rect.bottom >= 200) {
-      console.log("In viewport")
+      // console.log("In viewport")
       sectionView.classList.add("your-active-class");
       navLink.classList.add("your-active-link");
     } else {
-      console.log("Not in viewport")
+      // console.log("Not in viewport")
       sectionView.classList.remove("your-active-class");
       navLink.classList.remove("your-active-link");
     }
   }
 }
 
-
-
-
-
+window.addEventListener("scroll", isInViewport);
 
 // Scroll to anchor ID using scrollTo event
 
@@ -91,36 +67,9 @@ navBarClick = (ev) => {
   newTarget.scrollIntoView({behavior: 'smooth'});
 };
 
-
-//Top button
-
-scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-
-/**
- * End Main Functions
- * Begin Events
- *
-*/
-
-// Build menu
-
-buildNav();
-
-
-navbarList.insertAdjacentHTML('beforeend', navItems);
-
-
-
-// Scroll to section on link click
 navbarList.addEventListener("click", navBarClick);
 
 //Top button
-topButton.addEventListener("click", scrollToTop);
-
-// Set sections as active
 
 window.addEventListener("scroll", () => {
   if (document.documentElement.scrollTop < 435) {
@@ -129,4 +78,8 @@ window.addEventListener("scroll", () => {
     topButton.style.display = "block";}
 });
 
-window.addEventListener("scroll", isInViewport);
+scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+topButton.addEventListener("click", scrollToTop);
