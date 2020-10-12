@@ -4,7 +4,7 @@
 
 This project was created as part of Udacity's Front End Developer Nanodegree program.
 
-The project supplied me with a set of HTML and CSS files. It was my task to create the following functionality using JavaScript and minimal changes to the HTML and CSS.
+The project supplied me with a set of HTML and CSS files. It was my task to create the following functionality using the DOM and JavaScript, along with minimal changes to the HTML and CSS files.
 
 <ul>
   <li>Generate a navigation menu that will remain on screen and smoothly scroll to each section</li>
