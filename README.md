@@ -1,13 +1,11 @@
 # Landing Page Project
 
-## Table of Contents
+This project was created as part of Udacity's Front End Developer Nanodegree program.
 
-* [Instructions](#instructions)
+The project included a set of HTML and CSS files. It was my task to create the following functionality using JavaScript and minimal changes to the HTML and CSS.
 
-## Instructions
+Generate a navigation menu that will remain on screen and smoothly scroll to each section
+Highlight which section is in the viewport and reflect that in the navigation menu
+Create a button to return to the top
 
-The starter project has some HTML and CSS styling to display a static version of the Landing Page project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
-
-To get started, open `js/app.js` and start building out the app's functionality
-
-For specific, detailed instructions, look at the project instructions in the Udacity Classroom.
+One goal of this project is to create JavaScript that will be adaptable as the page content changes with minimal changes to the.
