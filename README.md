@@ -11,3 +11,4 @@ The project included a set of HTML and CSS files. It was my task to create the f
   <li>JavaScript should be adaptable as the page content changes</li>
 </ul>
 
+<a href="https://zlogikon.github.io/fend-project2-landing/">Link to project</a>
